@@ -36,3 +36,10 @@ include:
   - board: xiao_ble/nrf52840/zmk
     shield: settings_reset
     artifact-name: settings_reset
+  # Diagnostic build of the CENTRAL. No Studio -- the USB CDC endpoint
+  # can only carry one of Studio or the log console, and right now the
+  # log is what we need. Temporary; reflash totem_left.uf2 afterwards.
+  - board: xiao_ble/nrf52840/zmk
+    shield: totem_left
+    snippet: zmk-usb-logging
+    artifact-name: totem_left_LOGGING
